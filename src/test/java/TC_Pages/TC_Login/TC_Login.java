@@ -31,7 +31,6 @@ public class TC_Login {
     @Severity(SeverityLevel.CRITICAL)
     public void login() throws IOException, ParseException {
         login.loginWithValidData();
-        Assert.fail();
     }
 
     @AfterMethod
