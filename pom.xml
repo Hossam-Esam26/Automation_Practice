@@ -77,23 +77,35 @@
 
     </dependencies>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.2.5</version>
-                    <configuration>
-                        <suiteXmlFiles>
-                            <suiteXmlFile>src/test/resources/Runner/Runner.xml</suiteXmlFile>
-                        </suiteXmlFiles>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <build>
+            <pluginManagement>
+                <plugins>
+               <!--     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.5</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/Runner/Runner.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>-->
 
-    </build>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.5</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <file>src/test/resources/Runner/Runner.xml</file>
+                                <file>src/test/resources/Runner/Two.xml</file>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </pluginManagement>
+
+        </build>
 
 
 </project>
