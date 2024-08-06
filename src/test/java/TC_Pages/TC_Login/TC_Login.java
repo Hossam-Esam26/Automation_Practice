@@ -5,6 +5,7 @@ import Pages.Login.LoginScenario;
 import io.qameta.allure.*;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,6 +31,7 @@ public class TC_Login {
     @Severity(SeverityLevel.CRITICAL)
     public void login() throws IOException, ParseException {
         login.loginWithValidData();
+        Assert.fail();
     }
 
     @AfterMethod
